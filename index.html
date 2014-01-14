@@ -1,8 +1,20 @@
-<html>
+<!DOCTYPE html>
+<html x-ng-app>
 <head>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>AngularJS Basics</title>
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
-
+	<ul>
+		<h1>{{catName}}</h1>
+		<li>Pickle</li>
+		<li>Ben</li>
+		<li>Ethel</li>
+		<li>Grumpy Cat</li>
+		<li>Lil Bub</li>
+	</ul>
+	<input type="text" ng-model="catName">
 </body>
 </html>
