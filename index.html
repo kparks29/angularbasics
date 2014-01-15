@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html x-ng-app="">
+<html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<title>AngularJS Basics</title>
@@ -7,12 +7,20 @@
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
+	<div x-ng-app ="" class="gameBoard" x-ng-init="xTurn={val:false}; cells = ['','','','','','','','',''];">
+		<div x-ng-repeat="i in cells track by $index" id="cell{{$index}}" ng-class="{clear: $index%3==0}" x-ng-click="cells[$index] = (cells[$index] == '' ? ((xTurn.val = !xTurn.val) ? 'X' : 'O') : cells[$index]);">{{cells[$index]}}</div>
 
-	<div class="gameBoard" x-ng-controller="myController" >
-		<div x-ng-repeat="i in ar">
-			<div x-ng-repeat="j in ar" id="cell{{ar[i]}}-{{ar[j]}}" x-ng-click="toggler(i,j);"></div>
-		</div>
+		{{cells}}
 	</div>
 
 </body>
 </html>
+
+
+<!-- <div x-ng-app ="" class="gameBoard" x-ng-controller="myController">
+		<div x-ng-repeat="i in ar track by $index" id="cell{{$index}}" ng-class="{clear: $index%3==0}" x-ng-click="toggler($index, i);">{{i}}</div>
+	</div> -->
+
+	<!-- <div x-ng-app ="" class="gameBoard" x-ng-init="tog='X'; lastTog= 'O'; cells = ['','','','','','','','',''];" x-ng-click="lastTog = tog; tog = (tog == 'X' ? 'O' : 'X');">
+		<div x-ng-repeat="i in cells track by $index" id="cell{{$index}}" ng-class="{clear: $index%3==0}" x-ng-click="cells[$index] = (cells[$index] == lastTog ? lastTog : tog )">{{cells[$index]}}</div>
+	</div> -->

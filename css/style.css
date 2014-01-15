@@ -6,23 +6,36 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 }
+
+/*the layout of the entire gameBoard*/
 .gameBoard {
-	border: 1px solid lime;
-	height: 304px;
-	width: 304px;
 	text-align: center;
 	vertical-align: middle;
 	font-size: 25px;
 	line-height: 98px;
 }
 
-.gameBoard div div{
-	border: 1px solid black;
+/*the layout for the individual cells*/
+.gameBoard div {
 	height: 98px;
 	width: 98px;
 	float: left;
+	border: 1px;
 }
 
+
+/*horizontal lines of ttt board*/
+#cell0, #cell1, #cell2, #cell3, #cell4, #cell5 { 
+	border-bottom: 1px solid black;
+}
+/*veritcal lines of ttt board*/
+#cell1, #cell2, #cell4, #cell5, #cell7, #cell8 { 
+	border-left: 1px solid black;
+}
+
+.clear {
+	clear: both;
+}
 
 
 /*
