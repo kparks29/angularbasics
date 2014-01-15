@@ -6,21 +6,13 @@
 	<script src="js/lib/angular.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
-<body x-ng-init="showImage = true;">
+<body>
 
-	<div class="gameBoard">
-		<div><img src="{{imgSrc}}"></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
+	<div class="gameBoard" x-ng-controller="myController" >
+		<div x-ng-repeat="i in ar">
+			<div x-ng-repeat="j in ar" id="cell{{ar[i]}}-{{ar[j]}}" x-ng-click="toggler(i,j);"></div>
+		</div>
 	</div>
-
-	<button x-ng-click="imgSrc= (showImage ? 'http://placekitten.com/98/98': ''); showImage = !showImage;">Display</button>
 
 </body>
 </html>
