@@ -1,11 +1,25 @@
-div {
-	border: 1px dashed gray;
-	margin: 100px auto;
-	width: 400px;
+
+.gameBoard {
+	border: 1px solid lime;
+	height: 300px;
+	width: 300px;
 }
 
+.gameBoard div {
+	border: 1px solid black;
+	height: 98px;
+	width: 98px;
+	float: left;
+}
+
+
+
+/*
+
+
 h1 {
-	margin: 20px 10%;
+	margin: 20px 8%;
+	text-align: center;
 }
 
 li {
@@ -15,3 +29,4 @@ li {
 .done-true {
 	text-decoration: line-through;
 }
+*/

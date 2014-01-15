@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html x-ng-app>
+<html x-ng-app="">
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<title>AngularJS Basics</title>
-	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script src="js/lib/angular.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
-<body>
-	<div>
-		<ul ng-controller="myController">
-			<h1>{{catName}}</h1>
-			<li ng-repeat="cat in cats">
-				<input type="checkbox" ng-model="cat.done">
-				<span class="done-{{cat.done}}">{{cat.text}}</span>
-			</li>
-		</ul>
-		<input type="text" ng-model="catName">
+<body x-ng-init="showImage = true;">
+
+	<div class="gameBoard">
+		<div><img src="{{imgSrc}}"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
 	</div>
 
-	<div>
-		
-	</div>
-	
+	<button x-ng-click="imgSrc= (showImage ? 'http://placekitten.com/98/98': ''); showImage = !showImage;">Display</button>
+
 </body>
 </html>
