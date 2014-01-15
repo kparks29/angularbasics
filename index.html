@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html x-ng-app>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>AngularJS Basics</title>
 	<script type="text/javascript" src="js/lib/angular.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
-	<ul>
-		<h1>{{catName}}</h1>
-		<li>Pickle</li>
-		<li>Ben</li>
-		<li>Ethel</li>
-		<li>Grumpy Cat</li>
-		<li>Lil Bub</li>
-	</ul>
-	<input type="text" ng-model="catName">
+	<div>
+		<ul ng-controller="myController">
+			<h1>{{catName}}</h1>
+			<li ng-repeat="cat in cats">
+				<input type="checkbox" ng-model="cat.done">
+				<span class="done-{{cat.done}}">{{cat.text}}</span>
+			</li>
+		</ul>
+		<input type="text" ng-model="catName">
+	</div>
+
+	<div>
+		
+	</div>
+	
 </body>
 </html>

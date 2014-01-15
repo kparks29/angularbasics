@@ -1,0 +1,17 @@
+div {
+	border: 1px dashed gray;
+	margin: 100px auto;
+	width: 400px;
+}
+
+h1 {
+	margin: 20px 10%;
+}
+
+li {
+	list-style-type: none;
+}
+
+.done-true {
+	text-decoration: line-through;
+}
